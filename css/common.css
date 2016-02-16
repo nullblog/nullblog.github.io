@@ -3,3 +3,21 @@
 body {
   margin-top: 51px;
 }
+
+.fb_iframe_widget {
+  top: -5px;
+}
+
+input.gsc-input {
+  line-height: normal;
+}
+
+.gsc-search-button > input.gsc-search-button, .gsc-search-button > input.gsc-search-button-v2 {
+  height: 25px;
+  width: 67px;
+  padding: 3px 24px;
+}
+
+.col-left, .col-right {
+  margin-bottom: 15px;
+}
