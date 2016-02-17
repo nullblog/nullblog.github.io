@@ -3,17 +3,17 @@
 <head lang="ja">
 <META http-equiv="Content-Type" content="text/html; charset=utf8">
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
-<meta name="description" content=""/>
-<meta name="keywords" content="ぬるぶろ,null"/>
-<meta name="createdate" content="2016-02-16"/>
+<meta name="description" content="<?php echo $meta['description']; ?>"/>
+<meta name="keywords" content="<?php echo $meta['keywords']; ?>"/>
+<meta name="createdate" content="<?php echo $meta['date']; ?>"/>
 <meta property="og:locale" content="ja_JP" />
 <meta property="og:type" content="article" />
-<meta property="og:title" content="ぬるぶろへようこそ！｜ぬるぶろ" />
-<meta property="og:description" content="" />
+<meta property="og:title" content="<?php echo $meta['title']; ?>｜ぬるぶろ" />
+<meta property="og:description" content="<?php echo $meta['description']; ?>" />
 <meta property="og:site_name" content="ぬるぶろ" />
 <meta property="article:author" content="https://github.com/nullblog/" />
 <meta property="fb:app_id" content="668279799978855" />
-<title>ぬるぶろへようこそ！｜ぬるぶろ</title>
+<title><?php echo $meta['title']; ?>｜ぬるぶろ</title>
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 <link rel="stylesheet" href="/css/common.css">
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
@@ -74,7 +74,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <div class="col-xs-12 text-center">
       <div class="row">
         <h1 class='col-md-6 col-md-offset-3'>ぬるぶろ</h1>
-        <small class='col-md-3 text-right'>更新日:2016-02-16</small>
+        <small class='col-md-3 text-right'>更新日:<?php echo $meta['date']; ?></small>
       </div>
     </div>
     <div class="col-md-3 col-left text-center">
@@ -90,23 +90,3 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       </div>
     </div>
     <div class="col-md-6 col-center">
-<div class="row">
-  <div class="col-xs-12">
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h3 class="panel-title">ぬるぶろへようこそ！</h3>
-      </div>
-      <div class="panel-body">
-      <p>記事公開したら一覧表示追加する</p>
-      <p>残念ながら絶賛開発中です。</p>
-      </div>
-    </div>
-  </div>
-</div>
-    </div>
-    <div class="col-md-3 col-right">
-    </div>
-  </div>
-</div>
-</body>
-</html>
