@@ -2,15 +2,17 @@
 $meta = array(
   'description' => '',
   'keywords' => '',
-  'title' =>  ''
+  'title' =>  '',
+  'date' => 'yyyy-mm-dd'
 );
 ?>
-<?php require_once('src/common/_head.php'); ?>
+<?php include('src/common/_head.php'); ?>
 <div class="row">
   <div class="col-xs-12">
     <div class="panel panel-default">
       <div class="panel-heading">
-        <h3 class="panel-title"><?php echo $meta['title']; ?></h3>
+        <h3 class="panel-title text-center"><?php echo $meta['title']; ?></h3>
+        <small><?php echo $date; ?></small>
       </div>
       <div class="panel-body">
       記事をがりがり書いていくスペース
@@ -18,4 +20,4 @@ $meta = array(
     </div>
   </div>
 </div>
-<?php require_once('src/common/_foot.php'); ?>
+<?php include('src/common/_foot.php'); ?>

@@ -2,15 +2,16 @@
 $meta = array(
   'description' => 'TOPにも書いてあるように、わりとゲスな理由で始めて見ました。今後ちょっとずつコンテンツを増やしつつ、コンテンツを増やすということは開発をするということでして・・・',
   'keywords' => 'ご挨拶,エンジニア,ゆとり',
-  'title' =>  '初めましてのご挨拶'
+  'title' =>  '初めましてのご挨拶',
+  'date' => '2016-02-18'
 );
 ?>
-<?php require_once('src/common/_head.php'); ?>
+<?php include('src/common/_head.php'); ?>
 <div class="row">
   <div class="col-xs-12">
     <div class="panel panel-default">
       <div class="panel-heading">
-        <h3 class="panel-title"><?php echo $meta['title']; ?></h3>
+        <h3 class="panel-title text-center"><?php echo $meta['title']; ?></h3>
       </div>
       <div class="panel-body">
       <p><strong>色んなものをぶっ飛ばしたくて始めました</strong></p>
@@ -24,4 +25,4 @@ $meta = array(
     </div>
   </div>
 </div>
-<?php require_once('src/common/_foot.php'); ?>
+<?php include('src/common/_foot.php'); ?>
