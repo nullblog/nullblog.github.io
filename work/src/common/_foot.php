@@ -2,7 +2,6 @@
     <div id="col-right" class="col-md-3 col-right">
       <div class="panel-heading">
         <h3 class="panel-title text-center">ブログ一覧</h3>
-        <small><?php echo $meta['date']; ?></small>
       </div>
       <div class="panel-body">
         <label for="blog-search">絞り込みform</label>
