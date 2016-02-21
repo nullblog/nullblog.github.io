@@ -18,6 +18,7 @@
 <link rel="stylesheet" href="/css/common.css">
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/vue/1.0.16/vue.min.js"></script>
 </head>
 <body>
 <!-- Google Tag Manager -->
@@ -77,7 +78,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <small class='col-md-3 text-right'>更新日:<?php echo $meta['date']; ?></small>
       </div>
     </div>
-    <div class="col-md-3 col-left text-center">
+    <div id="col-left" class="col-md-3 col-left text-center">
       <div class="row">
         <div class="col-xs-12">
           <gcse:search></gcse:search>
@@ -89,4 +90,4 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </div>
       </div>
     </div>
-    <div class="col-md-6 col-center">
+    <div id='col-center' class="col-md-6 col-center">

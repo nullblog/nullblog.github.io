@@ -61,6 +61,8 @@ Class makeJson {
 
 		$result['href'] = str_replace('..', '', $dirName . DIRECTORY_SEPARATOR . $fileName);
 		$result['title'] = isset($array['head']['title']) ? $array['head']['title'] : '';
+		$result['blogtype'] = preg_replace('/^\.\.\/blog/', '', $dirName);
+
 		if($array['head']['meta']) {
 			foreach($array['head']['meta'] as $meta) {
 				if(isset($meta['@attributes']) && isset($meta['@attributes']['name']) && $meta['@attributes']['name'] == 'createdate') {

@@ -1,8 +1,8 @@
 <?php
 $meta = array(
-  'description' => '',
-  'keywords' => '',
-  'title' =>  '',
+  'description' => 'string',
+  'keywords' => 'csv',
+  'title' =>  'string',
   'date' => 'yyyy-mm-dd'
 );
 ?>
@@ -12,7 +12,6 @@ $meta = array(
     <div class="panel panel-default">
       <div class="panel-heading">
         <h3 class="panel-title text-center"><?php echo $meta['title']; ?></h3>
-        <small><?php echo $date; ?></small>
       </div>
       <div class="panel-body">
       記事をがりがり書いていくスペース
