@@ -13,7 +13,7 @@ Class makeJson {
 	}
 
 	/**
-	 * ŽÀsŠÖ”
+	 * å®Ÿè¡Œé–¢æ•°
 	 */
 	function run() {
 		$this->scan(self::BLOG_PATH);
@@ -21,18 +21,18 @@ Class makeJson {
 	}
 
 	/**
-	 * ƒfƒBƒŒƒNƒgƒŠ‚Ì’†g‚ð“Ç‚Ýž‚Ý
+	 * ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªã®ä¸­èº«ã‚’èª­ã¿è¾¼ã¿
 	 * @param string $dirName
 	 */
 	function scan($dirName) {
 		$result = scandir($dirName);
 		foreach($result as $fileName) {
-			// u.vŽn‚Ü‚è‚ÍƒXƒLƒbƒv
+			// ã€Œ.ã€å§‹ã¾ã‚Šã¯ã‚¹ã‚­ãƒƒãƒ—
 			if(strpos($fileName, '.') === 0) {
 				continue;
 			}
 
-			// ƒfƒBƒŒƒNƒgƒŠ‚Å‚ ‚ê‚Îö‚é
+			// ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªã§ã‚ã‚Œã°æ½œã‚‹
 			if(is_dir($dirName . DIRECTORY_SEPARATOR . $fileName)) {
 				$this->scan($dirName . DIRECTORY_SEPARATOR . $fileName);
 				continue;
@@ -45,7 +45,7 @@ Class makeJson {
 	}
 
 	/**
-	 * ƒuƒƒO‚Ì“Ç‚Ýž‚Ý
+	 * ãƒ–ãƒ­ã‚°ã®èª­ã¿è¾¼ã¿
 	 * @param string $dirName
 	 * @param string $fileName
 	 * @return array
@@ -75,9 +75,20 @@ Class makeJson {
 	}
 
 	/**
-	 * ‘‚«o‚µ
+	 * æ›¸ãå‡ºã—
 	 */
 	function write() {
+		// é †ç•ªã®å…¥ã‚Œæ›¿ãˆ
+		usort(
+			$this->result,
+			function($a, $b){
+				$a_time = strtotime($a['date']);
+				$b_time = strtotime($b['date']);
+				if($a_time === $b_time) {
+					return 0;
+				}
+				return ($a_time < $b_time)? 1: -1;
+			});
 		file_put_contents(self::BLOG_PATH . DIRECTORY_SEPARATOR . 'index.json', json_encode($this->result));
 	}
 }

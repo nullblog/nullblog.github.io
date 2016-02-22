@@ -59,6 +59,7 @@ makeBlogList.prototype.setSerchBox = function() {
 
   $.each(this.blogList, function(i, val){
     var tmp = val['blogtype'].split('/');
+
     val['blogtype'] = '/blog' + val['blogtype'];
     if(tmp[tmp.length - 1] == '') {
       tmp[tmp.length - 1] = '全部';
@@ -68,7 +69,34 @@ makeBlogList.prototype.setSerchBox = function() {
       genre: val['blogtype']};
   });
 
-  this.searchBoxVue.$data.blogLists = list;
+  this.searchBoxVue.$data.blogLists = objectSort(list);
+
+  /**
+   * objectをkeyでsortする
+   * @param Object object
+   */
+  function objectSort(object) {
+    var sorted = {};
+    var array = [];
+
+    // keyを取得する
+    for (key in object) {
+      if (object.hasOwnProperty(key)) {
+        array.push(key);
+      }
+    }
+
+    // keyをソート
+    array.sort(); 
+
+    // 返却用objectに値を入れなおす
+    for (var i = 0, l = array.length; i < l; i++) {
+      sorted[array[i]] = object[array[i]];
+    }
+
+    return sorted;
+  }
+
 }
 
 /**
