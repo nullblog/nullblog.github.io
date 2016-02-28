@@ -64,8 +64,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </div>
     <div class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="/">ホーム</a></li>
-        <li><a href="/blog/">ブログ</a></li>
+        <li><a href="/">ホーム</a></li>
+        <li class="active"><a href="/blog/">ブログ</a></li>
       </ul>
     </div>
   </div>
