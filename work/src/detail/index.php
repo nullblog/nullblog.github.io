@@ -14,8 +14,7 @@ $meta = array(
         <h3 class="panel-title"><?php echo $meta['title']; ?></h3>
       </div>
       <div class="panel-body">
-      <p>記事公開したら一覧表示追加する</p>
-      <p>残念ながら絶賛開発中です。</p>
+      <p>随時記事アップ中です。</p>
       </div>
     </div>
   </div>
