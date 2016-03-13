@@ -8,12 +8,10 @@ Class makeBlog {
 	const DETAIL_PATH = 'src/detail';
 	const WRITE_PATH = '../blog';
 
-	public $args;
+	// blogのmeta情報収取用
+	public $list = array();
 
 	function __construct($arg) {
-		// 実行コマンドはいらないから消す
-		unset($arg[0]);
-		$this->arg = $arg;
 		$this->run();
 	}
 
@@ -21,14 +19,8 @@ Class makeBlog {
 	 * 実行関数
 	 */
 	function run() {
-		if(count($this->arg) > 0) {
-			// 引数があった場合は直接実行
-			foreach($this->arg as $filePath) {
-				$this->fairing($filePath);
-			}
-		} else {
-			$this->scan(self::DETAIL_PATH);
-		}
+		$this->scan(self::DETAIL_PATH);
+		$this->jsonWrite();
 	}
 
 	/**
@@ -78,7 +70,7 @@ Class makeBlog {
  			return;
  		}
 		// ブログを取得
-		$contents = $this->getFile($dirName . DIRECTORY_SEPARATOR . $fileName);
+		$contents = $this->getFile($dirName . DIRECTORY_SEPARATOR . $fileName, $dirName);
 
 		// ブログを書き出す
 		$this->writeBlog($dirName, $fileName, $contents);
@@ -87,14 +79,22 @@ Class makeBlog {
 	/**
 	 * fileの実行結果を取得する
 	 * @param string $fileName
+	 * @param string $dirName
 	 * @return string
 	 */
-	function getFile($fileName) {
+	function getFile($fileName, $dirName) {
 		$contents = "";
+		$list = array();
 		ob_start();
 		include($fileName);
 		$contents = ob_get_contents();
 		ob_end_clean();
+		$list = array(
+			'href' => preg_replace('/php$/', 'html', preg_replace('/^src\/detail/', '/blog', $fileName), 1),
+			'title' => $meta['title'],
+			'blogtype' => preg_replace('/^src\/detail/', '', $dirName),
+			'date' => $meta['date']);
+		$this->list[] = $list;
 		return $contents;
 	}
 
@@ -112,5 +112,23 @@ Class makeBlog {
 
 		// 書き出す
 		file_put_contents($dirName . DIRECTORY_SEPARATOR . $fileName, $contents);
+	}
+
+	/**
+	 * jsonの書き出し
+	 */
+	function jsonWrite() {
+		// 順番の入れ替え
+		usort(
+			$this->list,
+			function($a, $b){
+				$a_time = strtotime($a['date']);
+				$b_time = strtotime($b['date']);
+				if($a_time === $b_time) {
+					return 0;
+				}
+				return ($a_time < $b_time)? 1: -1;
+			});
+		file_put_contents(self::WRITE_PATH . DIRECTORY_SEPARATOR . 'index.json', json_encode($this->list));
 	}
 }
