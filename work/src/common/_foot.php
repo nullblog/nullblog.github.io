@@ -1,5 +1,13 @@
+      <div class="row text-center">
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-1806842962334528" data-ad-slot="6754681097" data-ad-format="auto"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+      </div>
     </div>
     <div id="col-right" class="col-md-3 col-right">
+      <div class="row text-center">
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-1806842962334528" data-ad-slot="9847748293" data-ad-format="auto"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+      </div>
       <div class="panel-heading">
         <h3 class="panel-title text-center">ブログ一覧</h3>
       </div>
