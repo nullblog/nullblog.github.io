@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+<!--  created with free sitemap generation system www.sitemapxml.jp  --> 
+<url>
+  <loc>http://nullblog.github.io/</loc>
+  <priority>1.0</priority>
+  <lastmod>2016-03-20T19:17:00+09:00</lastmod>
+</url>
+<url>
+  <loc>http://nullblog.github.io/blog/</loc>
+  <priority>0.8</priority>
+  <lastmod>2016-03-20T19:17:00+09:00</lastmod>
+</url>
+<url>
+  <loc>http://nullblog.github.io/blog/job/20160320.html</loc>
+  <priority>0.7</priority>
+  <lastmod>2016-03-20T19:17:00+09:00</lastmod>
+</url>
+<url>
+  <loc>http://nullblog.github.io/blog/job/</loc>
+  <priority>0.7</priority>
+  <lastmod>2016-03-20T19:17:00+09:00</lastmod>
+</url>
+<url>
+  <loc>http://nullblog.github.io/blog/personal/20160311.html</loc>
+  <priority>0.7</priority>
+  <lastmod>2016-03-20T19:17:00+09:00</lastmod>
+</url>
+<url>
+  <loc>http://nullblog.github.io/blog/personal/</loc>
+  <priority>0.7</priority>
+  <lastmod>2016-03-20T19:17:00+09:00</lastmod>
+</url>
+<url>
+  <loc>http://nullblog.github.io/blog/personal/20160309.html</loc>
+  <priority>0.7</priority>
+  <lastmod>2016-03-20T19:17:00+09:00</lastmod>
+</url>
+<url>
+  <loc>http://nullblog.github.io/blog/personal/20160308.html</loc>
+  <priority>0.7</priority>
+  <lastmod>2016-03-20T19:17:00+09:00</lastmod>
+</url>
+<url>
+  <loc>http://nullblog.github.io/blog/teck/20160307.html</loc>
+  <priority>0.7</priority>
+  <lastmod>2016-03-20T19:17:00+09:00</lastmod>
+</url>
+<url>
+  <loc>http://nullblog.github.io/blog/teck/</loc>
+  <priority>0.7</priority>
+  <lastmod>2016-03-20T19:17:00+09:00</lastmod>
+</url>
+<url>
+  <loc>http://nullblog.github.io/blog/job/20160228.html</loc>
+  <priority>0.7</priority>
+  <lastmod>2016-03-20T19:17:00+09:00</lastmod>
+</url>
+<url>
+  <loc>http://nullblog.github.io/blog/teck/20160226.html</loc>
+  <priority>0.7</priority>
+  <lastmod>2016-03-20T19:17:00+09:00</lastmod>
+</url>
+<url>
+  <loc>http://nullblog.github.io/blog/teck/20160221.html</loc>
+  <priority>0.7</priority>
+  <lastmod>2016-03-20T19:17:00+09:00</lastmod>
+</url>
+<url>
+  <loc>http://nullblog.github.io/blog/personal/20160218.html</loc>
+  <priority>0.7</priority>
+  <lastmod>2016-03-20T19:17:00+09:00</lastmod>
+</url>
+<url>
+  <loc>http://nullblog.github.io/blog/index.html</loc>
+  <priority>0.7</priority>
+  <lastmod>2016-03-20T19:17:00+09:00</lastmod>
+</url>
+<url>
+  <loc>http://nullblog.github.io/js/makelist.js</loc>
+  <priority>0.6</priority>
+  <lastmod>2016-03-20T19:17:00+09:00</lastmod>
+</url>
+
+</urlset>
