@@ -92,7 +92,7 @@ Class makeBlog {
 		$list = array(
 			'href' => preg_replace('/php$/', 'html', preg_replace('/^src\/detail/', '/blog', $fileName), 1),
 			'title' => $meta['title'],
-			'blogtype' => preg_replace('/^src\/detail/', '', $dirName),
+			'blogtype' => '/blog' . preg_replace('/^src\/detail/', '', $dirName),
 			'date' => $meta['date']);
 		$this->list[] = $list;
 		return $contents;

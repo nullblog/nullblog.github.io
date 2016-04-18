@@ -55,15 +55,16 @@ $.ajax({
  * 検索用のselectboxの動的書き出し
  */
 makeBlogList.prototype.setSerchBox = function() {
-  var list = {};
+  var list = {
+    '/blog': {
+      name: '全部',
+      genre: '/blog'
+    }
+  };
 
   $.each(this.blogList, function(i, val){
     var tmp = val['blogtype'].split('/');
 
-    val['blogtype'] = '/blog' + val['blogtype'];
-    if(tmp[tmp.length - 1] == '') {
-      tmp[tmp.length - 1] = '全部';
-    }
     list[val['blogtype']] = {
       name: tmp[tmp.length - 1],
       genre: val['blogtype']};
@@ -73,25 +74,26 @@ makeBlogList.prototype.setSerchBox = function() {
 
   /**
    * objectをkeyでsortする
-   * @param Object object
+   * @param Object obj
+   * @return Array
    */
-  function objectSort(object) {
+  function objectSort(obj) {
     var sorted = {};
-    var array = [];
+    var arr = [];
 
     // keyを取得する
-    for (key in object) {
-      if (object.hasOwnProperty(key)) {
-        array.push(key);
+    for (key in obj) {
+      if (obj.hasOwnProperty(key)) {
+        arr.push(key);
       }
     }
 
     // keyをソート
-    array.sort(); 
+    arr.sort(); 
 
     // 返却用objectに値を入れなおす
-    for (var i = 0, l = array.length; i < l; i++) {
-      sorted[array[i]] = object[array[i]];
+    for (var i = 0, l = arr.length; i < l; i++) {
+      sorted[arr[i]] = obj[arr[i]];
     }
 
     return sorted;
